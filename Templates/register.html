@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content=""ie="edge">
+    <style>
+        h6 { color : red; }
+    </style>
+        <title> HOME </title>
+</head>
+
+<body bgcolor="nabeel">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1><center><bold> REGISTRATION FORM </bold></center></h1>
+    <center>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="FIRST NAME"><br>
+        <br>
+        <input type="text" name="last_name" placeholder="LAST NAME"><br>
+        <br>
+        <input type="text" name="username" placeholder="User Name"><br>
+        <br>
+        <input type="email" name="email" placeholder="EMAIL"><br>
+        <br>
+        <input type="password" name="password1" placeholder="PASSWORD"><br>
+        <br>
+        <input type="password" name="password2" placeholder="CONFIRM PASSWORD"><br>
+        <br>
+
+        <input type="submit">
+
+    </form>
+        <div>
+            {% for message in messages %}
+                <h6 text_color="red">{{message}}</h6>
+            {% endfor %}
+
+        </div>
+    </center>
+</body>
+
+
+
+</html>
+
